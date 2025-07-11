@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Alex Faquet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <div id="navbar-placeholder"></div>
+
+      
+  <header class="p-6 bg-white shadow-md text-center">
+    <h1 class="text-4xl font-bold mb-2">Projects</h1>
+    <p class="text-gray-600">A curated collection of what I’ve built, created, and explored.</p>
+    <a href="index.html" class="text-blue-600 mt-2 inline-block hover:underline text-sm">← Back to Home</a>
+  </header>
+
+  <main class="max-w-5xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- Serenitype -->
+    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <h2 class="text-xl font-semibold mb-2">Serenitype</h2>
+      <p class="text-gray-700 mb-3">A meditative typing game designed to improve WPM through a relaxing and aesthetic experience. Built with smooth transitions, calming themes, and real-time feedback.</p>
+      <a href="https://serenitype.app" target="_blank" class="text-blue-600 hover:underline">Visit serenitype.app →</a>
+    </div>
+
+    <!-- Placeholder for future projects -->
+    <div class="bg-gray-100 rounded-xl border-dashed border-2 border-gray-300 p-6 text-center text-gray-500 flex items-center justify-center" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
+      More coming soon...
+    </div>
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 p-6">
+    © <span id="year"></span> Alex Faquet
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+  
+        // --- Attach interactivity AFTER insert ---
+        const burger = document.getElementById("burger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const backdrop = document.getElementById("backdrop");
+  
+        const bar1 = document.getElementById("bar1");
+        const bar2 = document.getElementById("bar2");
+        const bar3 = document.getElementById("bar3");
+  
+        let isOpen = false;
+  
+        function toggleMenu(open) {
+          if (open) {
+            mobileMenu.classList.remove("max-h-0", "opacity-0", "pb-0");
+            mobileMenu.classList.add("max-h-96", "opacity-100", "pb-4");
+  
+            backdrop.classList.remove("hidden");
+            setTimeout(() => backdrop.classList.add("opacity-100"), 10);
+            document.body.classList.add("overflow-hidden");
+  
+            bar1.classList.add("rotate-45", "top-1/2", "-translate-y-1/2");
+            bar3.classList.add("-rotate-45", "bottom-auto", "top-1/2", "-translate-y-1/2");
+            bar2.classList.add("opacity-0");
+          } else {
+            mobileMenu.classList.add("max-h-0", "opacity-0", "pb-0");
+            mobileMenu.classList.remove("max-h-96", "opacity-100", "pb-4");
+  
+            backdrop.classList.remove("opacity-100");
+            setTimeout(() => backdrop.classList.add("hidden"), 500);
+            document.body.classList.remove("overflow-hidden");
+  
+            bar1.classList.remove("rotate-45", "top-1/2", "-translate-y-1/2");
+            bar3.classList.remove("-rotate-45", "bottom-auto", "top-1/2", "-translate-y-1/2");
+            bar2.classList.remove("opacity-0");
+          }
+  
+          isOpen = open;
+        }
+  
+        burger.addEventListener("click", () => toggleMenu(!isOpen));
+        backdrop.addEventListener("click", () => isOpen && toggleMenu(false));
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+          link.addEventListener("click", () => isOpen && toggleMenu(false));
+        });
+      });
+  </script>
+</body>
+</html>

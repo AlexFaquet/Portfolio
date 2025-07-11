@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Faquet – Life Timeline</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind config tweak (add in <script> tag after Tailwind CDN) -->
+<script>
+  tailwind.config = {
+    theme: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      }
+    }
+  }
+</script>
+
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px #60a5fa, 0 0 20px #60a5fa; }
+      50% { text-shadow: 0 0 20px #3b82f6, 0 0 30px #3b82f6; }
+    }
+    .animate-glow {
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+
+    #backdrop {
+      transition: opacity 0.5s ease, backdrop-filter 0.5s ease;
+      will-change: opacity, backdrop-filter;
+    }
+
+  </style>
+  
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <div id="navbar-placeholder"></div>
+
+
+
+
+    <header class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-white via-gray-100 to-blue-100 px-4 relative overflow-hidden">
+        <!-- Background glow blob (optional decorative circle) -->
+        <div class="absolute w-96 h-96 bg-blue-200 rounded-full opacity-30 blur-3xl animate-pulse -z-10 top-1/4 left-1/4"></div>
+      
+        <!-- Main Heading -->
+        <h1 class="text-5xl font-bold tracking-tight mb-4 text-blue-900 drop-shadow-md">
+          <span class="animate-glow">Alex Faquet</span>
+        </h1>
+      
+        <!-- Subtitle -->
+        <p class="text-xl text-gray-700">My Journey</p>
+      
+        <!-- Scroll down indicator -->
+        <div class="mt-12 animate-bounce text-gray-500 text-sm">
+          <a href="#alevels" class="hover:text-gray-800">Scroll down ↓</a>
+        </div>
+      </header>
+      
+      
+
+  <main class="max-w-3xl mx-auto p-6 space-y-20">
+
+    <section id="about" class="scroll-mt-28 max-w-3xl mx-auto py-16 px-6" data-aos="fade-up" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000"   >
+        <h2 class="text-3xl font-bold mb-4 justify-center items-center text-center">👋 About Me</h2>
+        <p class="text-lg text-gray-700 leading-relaxed text-center">
+          Hi, I’m Alex — a 21-year-old second-year student at the University of St Andrews.  
+          I’m a curious thinker, a lifelong problem solver, and someone who thrives under pressure.  
+          My journey has taken me from leading my school as Head Boy, to serving in the military as a Head Instructor, and now to exploring the intersections of data, design, and technology in academia and beyond.
+        </p>
+      
+        <p class="text-lg text-gray-700 leading-relaxed mt-4 text-center">
+          Discipline and drive have defined much of my path. I’ve always been passionate about technology, but it’s my leadership experiences — whether representing the armed forces or an entire student-body — that taught me how to navigate real-world challenges and think strategically.
+        </p>
+      
+        <p class="text-lg text-gray-700 leading-relaxed mt-4 text-center">
+            Outside of work and academics, I’m an avid golfer — a passion that actually began when I first heard of St Andrews. I also enjoy staying active through basketball, where I play on the university’s second team.
+          </p>
+          
+      </section>
+      
+
+    <!-- A-Levels + Head Boy -->
+    <section class="flex flex-col md:flex-row items-center gap-8 mb-24" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
+        <!-- Image -->
+        <img src="RST - Senior Speech Day 2022-326.JPG" alt="Head Boy" class="w-full md:w-1/2 rounded-xl shadow-md" />
+      
+        <!-- Text -->
+        <div class="md:w-1/2">
+          <h2 class="text-2xl font-bold mb-2">📘 A-Levels & Head Boy</h2>
+          <p class="text-gray-700">
+            During sixth form, I was elected Head Boy — a role that allowed me to lead student initiatives, organize major events, and build my confidence as a speaker and leader.
+          </p>
+          <a href="#details-alevels" class="mt-3 inline-block text-blue-600 hover:underline">Read more →</a>
+        </div>
+      </section>
+      
+
+    <!-- Army -->
+    <section id="army" class="flex flex-col md:flex-row-reverse items-center gap-8 mb-24" data-aos="fade-left" data-aos-delay="100"  data-aos-duration="1000">
+        <!-- Image -->
+        <img src="MSP.JPEG" alt="Army Service" class="w-full md:w-1/2 rounded-xl shadow-md" />
+      
+        <!-- Text -->
+        <div class="md:w-1/2">
+          <h2 class="text-2xl font-bold mb-2">🪖 Singapore Armed Forces</h2>
+          <p class="text-gray-700 text-right">
+            I enlisted in the Singapore Armed Forces and rose through the ranks to become Corporal First Class and Head Instructor of the Dog Handler Course. I trained new recruits, led performances for foreign militaries, and developed a deep sense of discipline, leadership, and resilience.
+          </p>
+          <a href="#details-army" class="mt-3 inline-block text-blue-600 hover:underline">Read more →</a>
+        </div>
+      </section>
+      
+
+    <!-- University -->
+    <section id="uni" class="flex flex-col md:flex-row items-center gap-8 mb-24" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
+        <!-- Image -->
+        <img src="PierWalk.JPG" alt="University of St Andrews" class="w-full md:w-1/2 rounded-xl shadow-md" />
+      
+        <!-- Text -->
+        <div class="md:w-1/2">
+          <h2 class="text-2xl font-bold mb-2">🎓 University of St Andrews</h2>
+          <p class="text-gray-700">
+            I’m currently studying Mathematics and Computer Science at the University of St Andrews. University life has taught me to work more efficiently, stay focused under pressure, and think with clarity — both in code and beyond.
+        </p>
+          <a href="#details-uni" class="mt-3 inline-block text-blue-600 hover:underline">Read more →</a>
+        </div>
+
+      </section>
+
+      <hr class="w-16 h-1 mx-auto bg-blue-600 rounded-full mb-6">
+
+
+      <section id="projects" class="scroll-mt-16 space-y-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+      
+        <!-- Serenitype -->
+        <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition duration-300">
+          <h3 class="text-2xl font-semibold mb-2 text-gray-900">Serenitype</h3>
+          <p class="text-gray-700 mb-3">
+            A meditative typing game designed to create a calm, immersive experience while improving typing speed. It features smooth theme transitions, ambient sounds, and real-time WPM tracking.
+          </p>
+          <a href="https://serenitype.app" target="_blank" class="inline-block text-blue-600 font-medium hover:underline">
+            Visit serenitype.app →
+          </a>
+        </div>
+      
+      </section>
+
+      
+      <hr class="w-16 h-1 mx-auto bg-blue-600 rounded-full mb-6">
+
+      
+
+      <section id="cv" class="relative bg-gradient-to-br from-white via-gray-50 to-blue-50 flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto my-20 p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+
+
+        <!-- Left Column: Text + Highlights -->
+        <div class="md:w-1/2" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+          <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold mb-2">Curriculum Vitae</p>
+          <h2 class="text-3xl font-bold mb-4">Resume</h2>
+          <p class="text-gray-700 mb-4">
+            My resume reflects a journey driven by discipline, curiosity, and initiative — from military leadership to analytical internships and academic excellence.
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-600 mb-6 space-y-1">
+            <li>Actuarial Analyst Intern at Roojai</li>
+            <li>Head Instructor – Singapore Armed Forces</li>
+            <li>Head Boy – Sixth Form Leadership</li>
+            <li>University of St Andrews – Maths & Computer Science</li>
+          </ul>
+          <a href="Alex Faquet-3.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-700 transition">
+            View Full CV (PDF)
+          </a>
+        </div>
+      
+        <!-- Right Column: Image (or use a placeholder for now) -->
+        <div class="md:w-1/2" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+          <img src="CV-Screenshot.png"
+          alt="CV Preview"
+          class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition duration-300"
+          onclick="openCVModal()" />
+             </div>
+      </section>
+      
+      
+      
+      <hr class="w-16 h-1 mx-auto bg-blue-600 rounded-full mb-6">
+
+      <section id="skills" class="max-w-5xl mx-auto my-20 p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <h2 class="text-3xl font-bold text-center mb-2">Skills & Experience</h2>
+        <p class="text-center text-gray-500 italic text-sm mb-8">
+          “Skills I’ve developed through doing — and continue to grow every day.”
+        </p>
+      
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
+          
+          <!-- Technical Skills -->
+          <div data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+            <div class="flex items-center gap-2 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+              </svg>
+              <h3 class="text-lg font-semibold text-gray-900">Technical</h3>
+            </div>
+            <ul class="space-y-3">
+              <li><strong>Excel</strong> – Used daily during my actuarial internship to forecast trends and build dashboards.</li>
+              <li><strong>HTML, CSS, JavaScript</strong> – Built Serenitype and other web projects with a focus on design and usability.</li>
+              <li><strong>Tailwind CSS</strong> – Used in this portfolio for responsive and efficient styling.</li>
+              <li><strong>Git & GitHub</strong> – Managed version control across personal projects and games.</li>
+            </ul>
+          </div>
+
+          <!-- Analytical -->
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <div class="flex items-center gap-2 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+              </svg>
+              <h3 class="text-lg font-semibold text-gray-900">Analytical & Programming</h3>
+            </div>
+            <ul class="space-y-3">
+              <li><strong>Java, Python, R</strong> – Used in coursework to solve structured logic and data analysis problems.</li>
+              <li><strong>Problem Solving</strong> – Refined through military decisions, coding challenges, and bug-fixing.</li>
+              <li><strong>Attention to Detail</strong> – Applied in actuarial forecasting and polishing game UX/UI.</li>
+            </ul>
+          </div>
+      
+          <!-- Leadership -->
+          <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
+            <div class="flex items-center gap-2 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+              </svg>
+              <h3 class="text-lg font-semibold text-gray-900">Leadership & Interpersonal</h3>
+            </div>
+            <ul class="space-y-3">
+              <li><strong>Leadership</strong> – Demonstrated as Head Instructor in the SAF and Head Boy in sixth form.</li>
+              <li><strong>Communication</strong> – Gained through teaching, public speaking, and cross-functional teamwork.</li>
+              <li><strong>Discipline</strong> – Built over time through national service, university life, and project work.</li>
+              <li><strong>Time Management</strong> – Balancing studies, sport, coding, and internships with consistency.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr class="w-16 h-1 mx-auto bg-blue-600 rounded-full mb-6">
+
+
+      <section id="testimonials" class="my-20 max-w-5xl mx-auto p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <h2 class="text-3xl font-bold text-center mb-2">Testimonials</h2>
+        <p class="text-center text-gray-500 italic text-sm mb-10">
+          Words from those I’ve had the privilege to work with.
+        </p>
+      
+        <div class="grid md:grid-cols-2 gap-6">
+        <!-- MWO Anselm Chelliah -->
+        <div class="md:col-span-2 bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+          <p class="italic text-gray-700 mb-4">
+            <span class="text-3xl text-blue-400 font-serif leading-none">“</span>It was a privilege to have known Alex over the past two short years. In that time, he became someone I could talk to about anything under the sun — always open, always real.
+          </p>
+          <p class="italic text-gray-700 mb-4">For a young guy, he carried a wisdom well beyond his years. What stood out most was his initiative and creative approach to problem-solving, especially when it came to training. He didn’t just do what was asked — he thought, adapted, and found better ways.</p>
+          <p class="italic text-gray-700 mb-4">I’ll always remember those conversations, that drive, and the quiet confidence he brought to every challenge. He made an impact in more ways than he probably realized.<span class="text-2xl text-blue-400 font-serif leading-none">”</span></p>
+          <p class="font-semibold text-gray-900">MWO Anselm Chelliah</p>
+          <p class="text-sm text-gray-500">Head of Military Working Dog Unit, Singapore Armed Forces</p>
+        </div>
+
+        <!-- Daniel Weil -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          <p class="italic text-gray-700 mb-4">
+            <span class="text-3xl text-blue-400 font-serif leading-none">“</span>Alex worked for me as an intern at AXA Partners. He was able to take on exacting projects and complete them not only within the prescribed time frame, but to outstanding quality — far beyond what was asked from him.
+          </p>
+          <p class="italic text-gray-700 mb-4">He also worked well with other employees and team members within AXA Partners.<span class="text-2xl text-blue-400 font-serif leading-none">”</span></p>
+          <p class="font-semibold text-gray-900">Daniel Weil</p>
+          <p class="text-sm text-gray-500">Ex-CEO, AXA Partners</p>
+        </div>
+
+        <!-- 2WO Liang Renhao -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
+          <p class="italic text-gray-700 mb-4">
+            <span class="text-3xl text-blue-400 font-serif leading-none">“</span>In essence, CFC Alexis’ contributions as a dog handler, course head instructor, and media specialist have greatly impacted our organization. He exemplifies the highest standards of professionalism, leadership, and dedication.
+          </p>
+          <p class="italic text-gray-700 mb-4">I am convinced that CFC Alexis will continue to flourish and make significant contributions wherever his career takes him. He is an asset to our organisation and is deserving of my highest recommendation.<span class="text-2xl text-blue-400 font-serif leading-none">”</span></p>
+          <p class="font-semibold text-gray-900">2WO Liang Renhao</p>
+          <p class="text-sm text-gray-500">Company Sergeant Major, Military Working Dog Unit, Singapore Armed Forces</p>
+        </div>
+
+      
+          <!-- Add more testimonial cards here -->
+        </div>
+      </section>
+      
+
+
+      
+  </main>
+
+  <!-- Expanded Sections -->
+  <section id="details-alevels" class="p-6 bg-white mt-20 shadow" data-aos="fade-in">
+    <h3 class="text-xl font-bold mb-2">More on A-Levels & Head Boy</h3>
+    <p>I led school assemblies, organized events, mentored younger students, and acted as a liaison between students and staff. This laid the foundation for my confidence as a speaker and leader.</p>
+  </section>
+
+  <section id="details-army" class="p-6 bg-white mt-20 shadow" data-aos="fade-in">
+    <h3 class="text-xl font-bold mb-2">More on Army Service</h3>
+    <p>Promoted to Corporal First Class, I trained Auxiliary Instructors and recruits, managed high-stakes scenarios, and led performances for foreign militaries, including bomb search drills and parades.</p>
+  </section>
+
+  <section id="details-uni" class="p-6 bg-white mt-20 shadow" data-aos="fade-in">
+    <h3 class="text-xl font-bold mb-2">More on University Life</h3>
+    <p>My experience at the University of St Andrews has been both challenging and transformative. Studying Computer Science has taught me to approach problems with precision, work efficiently under pressure, and stay focused for extended periods — all while maintaining the resilience needed to keep improving. The mental discipline and strategic thinking I've developed here complement the leadership foundation I built during national service, and continue to shape how I approach both technical and real-world challenges.</p>
+  </section>
+
+  <hr class="w-16 h-1 mx-auto bg-blue-600 rounded-full mb-6">
+  
+
+  <section id="contact" class="max-w-3xl mx-auto my-24 px-6 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+    <h2 class="text-3xl font-bold mb-2 text-gray-900">Let's Connect</h2>
+    <p class="text-gray-600 mb-6 text-lg">Whether you're a recruiter, collaborator, or just curious about my journey — I'd love to hear from you.</p>
+  
+    <div class="flex justify-center gap-6 text-blue-600 text-lg font-medium" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+      <a href="mailto:alexfaquet@gmail.com" class="flex items-center gap-2 hover:text-blue-800 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+        </svg>
+        alexfaquet2003@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/alex-faquet-b83246159/" target="_blank" class="flex items-center gap-2 hover:text-blue-800 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V8H0v16zM8 8h4.66v2.2h.06c.65-1.23 2.24-2.53 4.6-2.53 4.93 0 5.84 3.25 5.84 7.47V24h-5v-6.72c0-1.6-.03-3.66-2.23-3.66-2.23 0-2.57 1.74-2.57 3.54V24H8V8z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </section>
+  
+
+  <footer class="text-center text-sm text-gray-500 p-4 mt-20">
+    © <span id="year"></span> Alex Faquet
+  </footer>
+
+<!-- Modal Overlay -->
+<div id="cvModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 opacity-0 pointer-events-none transition-all duration-300">
+  <div class="bg-white rounded-xl shadow-2xl w-[85%] max-w-2xl max-h-[90vh] p-4 scale-95 opacity-0 transition-all duration-300 relative overflow-auto" id="cvModalContent">
+    <button onclick="closeCVModal()" class="absolute top-2 right-3 text-gray-500 text-2xl font-bold hover:text-gray-700">&times;</button>
+    <img src="CV-Screenshot.png" alt="Expanded CV" class="w-full max-h-[80vh] rounded-md object-contain shadow-md" />
+
+ </div>
+</div>
+
+<script>
+  function openCVModal() {
+    const modal = document.getElementById('cvModal');
+    const content = document.getElementById('cvModalContent');
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      content.classList.remove('scale-95', 'opacity-0');
+    }, 10);
+  }
+
+  function closeCVModal() {
+    const modal = document.getElementById('cvModal');
+    const content = document.getElementById('cvModalContent');
+    content.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      modal.classList.add('opacity-0', 'pointer-events-none');
+    }, 300);
+  }
+</script>
+
+</script>
+
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    window.onload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
+
+<script>
+const burger = document.getElementById("burger");
+const mobileMenu = document.getElementById("mobileMenu");
+const backdrop = document.getElementById("backdrop");
+
+const bar1 = document.getElementById("bar1");
+const bar2 = document.getElementById("bar2");
+const bar3 = document.getElementById("bar3");
+
+let isOpen = false;
+
+function toggleMenu(open) {
+  if (open) {
+    // Show dropdown
+    mobileMenu.classList.remove("max-h-0", "opacity-0", "pb-0");
+    mobileMenu.classList.add("max-h-96", "opacity-100", "pb-4");
+
+    // Show backdrop with smooth fade
+    backdrop.classList.remove("hidden");
+    setTimeout(() => {
+      backdrop.classList.add("opacity-100");
+    }, 10);
+
+    // Lock scroll
+    document.body.classList.add("overflow-hidden");
+
+    // Burger → X
+    bar1.classList.add("rotate-45", "top-1/2", "-translate-y-1/2");
+    bar3.classList.add("-rotate-45", "bottom-auto", "top-1/2", "-translate-y-1/2");
+    bar2.classList.add("opacity-0");
+
+  } else {
+    // Hide dropdown
+    mobileMenu.classList.add("max-h-0", "opacity-0", "pb-0");
+    mobileMenu.classList.remove("max-h-96", "opacity-100", "pb-4");
+
+    // Fade out backdrop first, then hide it
+    backdrop.classList.remove("opacity-100");
+    setTimeout(() => {
+      backdrop.classList.add("hidden");
+    }, 500); // Match your CSS duration
+
+    // Unlock scroll
+    document.body.classList.remove("overflow-hidden");
+
+    // X → Burger
+    bar1.classList.remove("rotate-45", "top-1/2", "-translate-y-1/2");
+    bar3.classList.remove("-rotate-45", "bottom-auto", "top-1/2", "-translate-y-1/2");
+    bar2.classList.remove("opacity-0");
+  }
+
+  isOpen = open;
+}
+
+// Toggle on burger click
+burger.addEventListener("click", () => toggleMenu(!isOpen));
+
+// Auto-close when a link is clicked
+document.querySelectorAll("#mobileMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    if (isOpen) toggleMenu(false);
+  });
+});
+
+// Optional: Close when clicking the backdrop
+backdrop.addEventListener("click", () => {
+  if (isOpen) toggleMenu(false);
+});
+
+
+</script>
+
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+
+      // --- Attach interactivity AFTER insert ---
+      const burger = document.getElementById("burger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const backdrop = document.getElementById("backdrop");
+
+      const bar1 = document.getElementById("bar1");
+      const bar2 = document.getElementById("bar2");
+      const bar3 = document.getElementById("bar3");
+
+      let isOpen = false;
+
+      function toggleMenu(open) {
+        if (open) {
+          mobileMenu.classList.remove("max-h-0", "opacity-0", "pb-0");
+          mobileMenu.classList.add("max-h-96", "opacity-100", "pb-4");
+
+          backdrop.classList.remove("hidden");
+          setTimeout(() => backdrop.classList.add("opacity-100"), 10);
+          document.body.classList.add("overflow-hidden");
+
+          bar1.classList.add("rotate-45", "top-1/2", "-translate-y-1/2");
+          bar3.classList.add("-rotate-45", "bottom-auto", "top-1/2", "-translate-y-1/2");
+          bar2.classList.add("opacity-0");
+        } else {
+          mobileMenu.classList.add("max-h-0", "opacity-0", "pb-0");
+          mobileMenu.classList.remove("max-h-96", "opacity-100", "pb-4");
+
+          backdrop.classList.remove("opacity-100");
+          setTimeout(() => backdrop.classList.add("hidden"), 500);
+          document.body.classList.remove("overflow-hidden");
+
+          bar1.classList.remove("rotate-45", "top-1/2", "-translate-y-1/2");
+          bar3.classList.remove("-rotate-45", "bottom-auto", "top-1/2", "-translate-y-1/2");
+          bar2.classList.remove("opacity-0");
+        }
+
+        isOpen = open;
+      }
+
+      burger.addEventListener("click", () => toggleMenu(!isOpen));
+      backdrop.addEventListener("click", () => isOpen && toggleMenu(false));
+      document.querySelectorAll("#mobileMenu a").forEach(link => {
+        link.addEventListener("click", () => isOpen && toggleMenu(false));
+      });
+    });
+</script>
+
+  
+</body>
+</html>

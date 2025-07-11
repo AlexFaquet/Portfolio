@@ -1,0 +1,36 @@
+
+
+<!-- navbar.html -->
+<div class="sticky top-0 z-50 bg-white shadow-sm">
+    <nav class="w-full px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="text-lg font-bold tracking-tight text-gray-900 hover:text-blue-600 transition">Alex Faquet</a>
+  
+      <!-- Burger Icon -->
+      <button id="burger" class="md:hidden relative w-6 h-6 focus:outline-none">
+        <span id="bar1" class="absolute top-0 left-0 w-full h-0.5 bg-gray-700 transition-transform duration-500 ease-in-out origin-center"></span>
+        <span id="bar2" class="absolute top-1/2 left-0 w-full h-0.5 bg-gray-700 transition-opacity duration-500 ease-in-out transform -translate-y-1/2 origin-center"></span>
+        <span id="bar3" class="absolute bottom-0 left-0 w-full h-0.5 bg-gray-700 transition-transform duration-500 ease-in-out origin-center delay-75"></span>
+      </button>
+  
+      <!-- Desktop Links -->
+      <div id="navLinks" class="hidden md:flex space-x-6 text-sm">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+        <a href="index.html#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+        <a href="index.html#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+        <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition">View All</a>
+      </div>
+    </nav>
+  
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="md:hidden max-h-0 opacity-0 overflow-hidden px-6 pb-0 space-y-2 bg-white shadow-inner transition-all duration-500 ease-in-out">
+      <a href="index.html" class="block text-gray-700 hover:text-blue-600 transition">Home</a>
+      <a href="index.html#about" class="block text-gray-700 hover:text-blue-600 transition">About</a>
+      <a href="index.html#projects" class="block text-gray-700 hover:text-blue-600 transition">Projects</a>
+      <a href="projects.html" class="block text-gray-700 hover:text-blue-600 transition">View All</a>
+    </div>
+  </div>
+  
+  <!-- Backdrop -->
+  <div id="backdrop" class="fixed inset-0 z-40 hidden md:hidden bg-black/30 backdrop-blur-sm transition-opacity duration-500 ease-in-out opacity-0"></div>
+  
