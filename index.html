@@ -254,48 +254,59 @@
       <hr class="w-16 h-1 mx-auto bg-blue-600 rounded-full mb-6">
 
 
-      <section id="testimonials" class="my-20 max-w-5xl mx-auto p-6 bg-white rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-        <h2 class="text-3xl font-bold text-center mb-2">Testimonials</h2>
-        <p class="text-center text-gray-500 italic text-sm mb-10">
-          Words from those I’ve had the privilege to work with.
-        </p>
-      
-        <div class="grid md:grid-cols-2 gap-6">
-        <!-- MWO Anselm Chelliah -->
-        <div class="md:col-span-2 bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
-          <p class="italic text-gray-700 mb-4">
-            <span class="text-3xl text-blue-400 font-serif leading-none">“</span>It was a privilege to have known Alex over the past two short years. In that time, he became someone I could talk to about anything under the sun — always open, always real.
-          </p>
-          <p class="italic text-gray-700 mb-4">For a young guy, he carried a wisdom well beyond his years. What stood out most was his initiative and creative approach to problem-solving, especially when it came to training. He didn’t just do what was asked — he thought, adapted, and found better ways.</p>
-          <p class="italic text-gray-700 mb-4">I’ll always remember those conversations, that drive, and the quiet confidence he brought to every challenge. He made an impact in more ways than he probably realized.<span class="text-2xl text-blue-400 font-serif leading-none">”</span></p>
-          <p class="font-semibold text-gray-900">MWO Anselm Chelliah</p>
-          <p class="text-sm text-gray-500">Head of Military Working Dog Unit, Singapore Armed Forces</p>
-        </div>
+<section id="testimonials" class="my-20 max-w-3xl mx-auto px-4">
+  <h2 class="text-3xl font-bold text-center mb-6">Testimonials</h2>
 
-        <!-- Daniel Weil -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-          <p class="italic text-gray-700 mb-4">
-            <span class="text-3xl text-blue-400 font-serif leading-none">“</span>Alex worked for me as an intern at AXA Partners. He was able to take on exacting projects and complete them not only within the prescribed time frame, but to outstanding quality — far beyond what was asked from him.
-          </p>
-          <p class="italic text-gray-700 mb-4">He also worked well with other employees and team members within AXA Partners.<span class="text-2xl text-blue-400 font-serif leading-none">”</span></p>
-          <p class="font-semibold text-gray-900">Daniel Weil</p>
-          <p class="text-sm text-gray-500">Ex-CEO, AXA Partners</p>
-        </div>
+  <div class="space-y-10 relative z-20">
 
-        <!-- 2WO Liang Renhao -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
-          <p class="italic text-gray-700 mb-4">
-            <span class="text-3xl text-blue-400 font-serif leading-none">“</span>In essence, CFC Alexis’ contributions as a dog handler, course head instructor, and media specialist have greatly impacted our organization. He exemplifies the highest standards of professionalism, leadership, and dedication.
-          </p>
-          <p class="italic text-gray-700 mb-4">I am convinced that CFC Alexis will continue to flourish and make significant contributions wherever his career takes him. He is an asset to our organisation and is deserving of my highest recommendation.<span class="text-2xl text-blue-400 font-serif leading-none">”</span></p>
-          <p class="font-semibold text-gray-900">2WO Liang Renhao</p>
-          <p class="text-sm text-gray-500">Company Sergeant Major, Military Working Dog Unit, Singapore Armed Forces</p>
-        </div>
+    <!-- Envelope Template (copy this for each testimonial) -->
+    <div class="testimonial-envelope relative bg-gray-100 rounded-lg shadow-lg overflow-visible group transition-all duration-500 cursor-pointer" data-open="false" data-index="0" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <!-- Flap -->
+      <div class="flap absolute top-0 left-0 w-full h-0 z-10 transition-transform duration-500 origin-top bg-white"
+           style="clip-path: polygon(0 0, 50% 100%, 100% 0); height: 80px;"></div>
 
-      
-          <!-- Add more testimonial cards here -->
-        </div>
-      </section>
+      <!-- Body -->
+      <div class="pt-[80px] px-6 pb-6 text-center">
+        <p class="text-lg font-semibold text-gray-800">💌 Daniel Weil</p>
+        <p class="text-sm text-gray-500">Ex-CEO, AXA Partners</p>
+      </div>
+
+      <!-- Letter -->
+      <div class="letter absolute bottom-0 left-0 w-full px-6 py-4 bg-white text-gray-700 rounded-b-lg opacity-0 -translate-y-0 scale-95 z-20 transition-all duration-500 ease-in-out transform">
+        <p class="italic mb-4">"Alex worked for me as an intern at AXA Partners. He was able to take on exacting projects and complete them not only within the prescribed time frame, but to outstanding quality — far beyond what was asked from him."</p>
+        <p class="italic">"He also worked well with other employees and team members within AXA Partners."</p>
+        <p class="font-semibold text-gray-900 mt-4">Daniel Weil</p>
+        <p class="text-sm text-gray-500">Ex-CEO, AXA Partners</p>
+      </div>
+    </div>
+
+    <!-- Add more envelopes below by copying the above block and changing content + data-index -->
+    <div class="testimonial-envelope relative bg-gray-100 rounded-lg shadow-lg overflow-visible group transition-all duration-500 cursor-pointer" data-open="false" data-index="1" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+      <div class="flap absolute top-0 left-0 w-full h-0 z-10 transition-transform duration-500 origin-top bg-white"
+           style="clip-path: polygon(0 0, 50% 100%, 100% 0); height: 80px;"></div>
+      <div class="pt-[80px] px-6 pb-6 text-center">
+        <p class="text-lg font-semibold text-gray-800">💌 MWO Anselm Chelliah</p>
+        <p class="text-sm text-gray-500">Singapore Armed Forces</p>
+      </div>
+      <div class="letter absolute bottom-0 left-0 w-full px-6 py-4 bg-white text-gray-700 rounded-b-lg opacity-0 -translate-y-0 scale-95 z-20 transition-all duration-500 ease-in-out transform">
+        <p class="italic mb-4">"It was a privilege to have known Alex over the past two short years. In that time, he became someone I could talk to about anything under the sun — always open, always real."</p>
+        <p class="italic">"For a young guy, he carried a wisdom well beyond his years. What stood out most was his initiative and creative approach to problem-solving, especially when it came to training. He didn’t just do what was asked — he thought, adapted, and found better ways."</p>
+        <p class="font-semibold text-gray-900 mt-4">MWO Anselm Chelliah</p>
+        <p class="text-sm text-gray-500">Singapore Armed Forces</p>
+      </div>
+    </div>
+
+
+
+    <!-- You can add more by following this structure and incrementing data-index -->
+  </div>
+
+  <!-- Shared backdrop -->
+  <div id="letterBackdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-500 z-10"></div>
+</section>
+
+
+
       
 
 
@@ -514,6 +525,76 @@ backdrop.addEventListener("click", () => {
       });
     });
 </script>
+
+<script>
+  const envelopes = document.querySelectorAll('.testimonial-envelope');
+  const letterBackdrop = document.getElementById('letterBackdrop');
+
+  let openIndex = null;
+
+  envelopes.forEach((envelope, index) => {
+    const flap = envelope.querySelector('.flap');
+    const letter = envelope.querySelector('.letter');
+
+    envelope.addEventListener('click', () => {
+      const isOpen = envelope.getAttribute('data-open') === 'true';
+
+      // Close currently open one if it's not this
+      if (openIndex !== null && openIndex !== index) {
+        const openEnvelope = envelopes[openIndex];
+        const openFlap = openEnvelope.querySelector('.flap');
+        const openLetter = openEnvelope.querySelector('.letter');
+
+        openFlap.style.transform = 'rotateX(0deg)';
+        openLetter.style.opacity = 0;
+        openLetter.style.transform = 'translateY(0) scale(0.95)';
+        openEnvelope.setAttribute('data-open', 'false');
+      }
+
+      if (isOpen) {
+        // Close this one
+        flap.style.transform = 'rotateX(0deg)';
+        letter.style.opacity = 0;
+        letter.style.transform = 'translateY(0) scale(0.95)';
+        letterBackdrop.classList.remove('opacity-100');
+        letterBackdrop.classList.add('opacity-0', 'pointer-events-none');
+        envelope.setAttribute('data-open', 'false');
+        openIndex = null;
+      } else {
+        // Open this one
+        flap.style.transform = 'rotateX(-120deg)';
+        requestAnimationFrame(() => {
+          const height = letter.scrollHeight;
+          letter.style.transform = `translateY(-${height}px) scale(1)`;
+          letter.style.opacity = 1;
+        });
+        letterBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+        letterBackdrop.classList.add('opacity-100');
+        envelope.setAttribute('data-open', 'true');
+        openIndex = index;
+      }
+    });
+  });
+
+  // Optional: click the backdrop to close any open envelope
+  letterBackdrop.addEventListener('click', () => {
+    if (openIndex !== null) {
+      const openEnvelope = envelopes[openIndex];
+      const openFlap = openEnvelope.querySelector('.flap');
+      const openLetter = openEnvelope.querySelector('.letter');
+
+      openFlap.style.transform = 'rotateX(0deg)';
+      openLetter.style.opacity = 0;
+      openLetter.style.transform = 'translateY(0) scale(0.95)';
+      openEnvelope.setAttribute('data-open', 'false');
+      openIndex = null;
+
+      letterBackdrop.classList.remove('opacity-100');
+      letterBackdrop.classList.add('opacity-0', 'pointer-events-none');
+    }
+  });
+</script>
+
 
   
 </body>
