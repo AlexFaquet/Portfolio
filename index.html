@@ -50,7 +50,7 @@
 }
 
 .paper-texture {
-  background-image: url('paper-fibers.png');
+  background-image: url('Main/assets/paper-fibers.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(255,255,255,0.9); /* fallback/overlay */
@@ -113,7 +113,7 @@
     <!-- A-Levels + Head Boy -->
     <section class="flex flex-col md:flex-row items-center gap-8 mb-24" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
         <!-- Image -->
-        <img src="RST - Senior Speech Day 2022-326.JPG" alt="Head Boy" class="w-full md:w-1/2 rounded-xl shadow-md" />
+        <img src="Main/assets/RST - Senior Speech Day 2022-326.JPG" alt="Head Boy" class="w-full md:w-1/2 rounded-xl shadow-md" />
       
         <!-- Text -->
         <div class="md:w-1/2">
@@ -129,7 +129,7 @@
     <!-- Army -->
     <section id="army" class="flex flex-col md:flex-row-reverse items-center gap-8 mb-24" data-aos="fade-left" data-aos-delay="100"  data-aos-duration="1000">
         <!-- Image -->
-        <img src="MSP.JPEG" alt="Army Service" class="w-full md:w-1/2 rounded-xl shadow-md" />
+        <img src="Main/assets/MSP.JPEG" alt="Army Service" class="w-full md:w-1/2 rounded-xl shadow-md" />
       
         <!-- Text -->
         <div class="md:w-1/2">
@@ -145,7 +145,7 @@
     <!-- University -->
     <section id="uni" class="flex flex-col md:flex-row items-center gap-8 mb-24" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
         <!-- Image -->
-        <img src="PierWalk.JPG" alt="University of St Andrews" class="w-full md:w-1/2 rounded-xl shadow-md" />
+        <img src="Main/assets/PierWalk.JPG" alt="University of St Andrews" class="w-full md:w-1/2 rounded-xl shadow-md" />
       
         <!-- Text -->
         <div class="md:w-1/2">
@@ -198,14 +198,14 @@
             <li>Head Boy – Sixth Form Leadership</li>
             <li>University of St Andrews – Maths & Computer Science</li>
           </ul>
-          <a href="Alex Faquet-3.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-700 transition">
+          <a href="Main/assets/Alex Faquet-3.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-700 transition">
             View Full CV (PDF)
           </a>
         </div>
       
         <!-- Right Column: Image (or use a placeholder for now) -->
         <div class="md:w-1/2" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
-          <img src="CV-Screenshot.png"
+          <img src="Main/assets/CV-Screenshot.png"
           alt="CV Preview"
           class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition duration-300"
           onclick="openCVModal()" />
@@ -333,7 +333,7 @@
 <div id="cvModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 opacity-0 pointer-events-none transition-all duration-300">
   <div class="bg-white rounded-xl shadow-2xl w-[85%] max-w-2xl max-h-[90vh] p-4 scale-95 opacity-0 transition-all duration-300 relative overflow-auto" id="cvModalContent">
     <button onclick="closeCVModal()" class="absolute top-2 right-3 text-gray-500 text-2xl font-bold hover:text-gray-700">&times;</button>
-    <img src="CV-Screenshot.png" alt="Expanded CV" class="w-full max-h-[80vh] rounded-md object-contain shadow-md" />
+    <img src="Main/assets/CV-Screenshot.png" alt="Expanded CV" class="w-full max-h-[80vh] rounded-md object-contain shadow-md" />
 
  </div>
 </div>
@@ -446,7 +446,7 @@ backdrop.addEventListener("click", () => {
 </script>
 
 <script>
-  fetch('navbar.html')
+  fetch('../navbar.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
@@ -503,7 +503,7 @@ backdrop.addEventListener("click", () => {
   const letterBackdrop = document.getElementById("letterBackdrop");
   let openIndex = null;
 
-  fetch("testimonials.json")
+  fetch("Main/assets/testimonials.json")
     .then(res => res.json())
     .then(data => {
       data.forEach((item, index) => {

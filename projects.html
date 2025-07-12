@@ -28,7 +28,7 @@
   <header class="p-6 bg-white shadow-md text-center">
     <h1 class="text-4xl font-bold mb-2">Projects</h1>
     <p class="text-gray-600">A curated collection of what I’ve built, created, and explored.</p>
-    <a href="index.html" class="text-blue-600 mt-2 inline-block hover:underline text-sm">← Back to Home</a>
+    <a href="../Main/index.html" class="text-blue-600 mt-2 inline-block hover:underline text-sm">← Back to Home</a>
   </header>
 
   <main class="max-w-5xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -57,7 +57,7 @@
   <script>AOS.init();</script>
 
   <script>
-    fetch('navbar.html')
+    fetch('../navbar.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
