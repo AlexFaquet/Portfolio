@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Military Chapter – Alex Faquet</title>
+  <title>Military Journey – Alex Faquet</title>
 
   <!-- Fonts and Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -14,88 +14,176 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to bottom right, #f9fafb, #eef2ff);
     }
+  .gallery-img {
+    width: 18rem; /* w-72 */
+    height: 12rem; /* h-48 */
+    object-fit: cover;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.05);
+  }
   </style>
 </head>
 <body class="text-gray-800 overflow-x-hidden">
 
   <!-- AOS animation init -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 
-  <!-- Header -->
-  <header class="px-6 md:px-16 pt-20 pb-10 text-center" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Military Journey</h1>
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto">A transformative chapter marked by grit, growth, and leadership — from the first footstep in Basic Military Training to leading as a Head Instructor.</p>
+  <!-- Hero Section -->
+  <header class="px-6 md:px-16 pt-20 pb-12 text-center" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">My Military Journey</h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">From recruit to Head Instructor, my service in the Singapore Armed Forces shaped who I am today — through challenge, leadership, and trust.</p>
   </header>
 
-  <!-- Section 1: BMT -->
-  <section class="px-6 md:px-20 py-16" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+  <!-- SECTION TEMPLATE -->
+  <section class="px-6 md:px-20 py-16" data-aos="fade-up" data-aos-delay="200">
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-      <img src="https://via.placeholder.com/600x400" class="rounded-2xl shadow-lg" alt="BMT photo" />
+      <img src="Military/assets/BMT2.JPG" class="rounded-xl shadow-lg" alt="BMT" />
       <div>
-        <h2 class="text-2xl font-semibold mb-4">Basic Military Training</h2>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Recruit – Basic Military Training</h2>
+        <p class="text-sm text-gray-500 mb-4">Oct 2022 – Dec 2022</p>
         <p class="text-gray-700 leading-relaxed">
-          I began my National Service journey with the Singapore Armed Forces at BMT. This phase instilled the fundamentals of discipline, resilience, and teamwork — values that became the foundation of everything that followed.
+          Completed foundational training focused on physical resilience, military discipline, and mental endurance. Learned essential soldiering skills through intense drills, teamwork, and daily regimentation. This chapter built the base for everything that followed.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Section 2: Dog Handler -->
-  <section class="px-6 md:px-20 py-16 bg-white/70" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+  <section class="px-6 md:px-20 py-16 bg-white/80" data-aos="fade-up" data-aos-delay="250">
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
-      <img src="https://via.placeholder.com/600x400" class="rounded-2xl shadow-lg" alt="Dog handler" />
+      <img src="Military/assets/ST2.JPG" class="rounded-xl shadow-lg" alt="Infantry" />
       <div>
-        <h2 class="text-2xl font-semibold mb-4">Military Working Dog Handler</h2>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Private – Infantry Trainee (8 SIR)</h2>
+        <p class="text-sm text-gray-500 mb-4">Dec 2022 – Feb 2023</p>
         <p class="text-gray-700 leading-relaxed">
-          Assigned to the Military Police K9 Unit, I underwent specialized training to work with working dogs. My bond with Nitro — my assigned partner — taught me lessons in patience, communication, and trust that no classroom could offer.
+          Trained in urban combat, CBR defense, and live-fire drills with weapons like the M203 grenade launcher. Built tactical awareness and adaptability under pressure, laying the foundation for operational confidence.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Leadership -->
-  <section class="px-6 md:px-20 py-16" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+  <section class="px-6 md:px-20 py-16" data-aos="fade-up" data-aos-delay="300">
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-      <img src="https://via.placeholder.com/600x400" class="rounded-2xl shadow-lg" alt="Instructor role" />
+      <img src="Military/assets/MeAndStorm.JPG" class="rounded-xl shadow-lg" alt="MWD Handler" />
       <div>
-        <h2 class="text-2xl font-semibold mb-4">Head Instructor</h2>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Lance Corporal – MWD Handler</h2>
+        <p class="text-sm text-gray-500 mb-4">Feb 2023 – Jul 2023</p>
         <p class="text-gray-700 leading-relaxed">
-          I was entrusted with leading the Dog Handler Course — training new handlers and mentoring auxiliary instructors. The role honed my leadership, adaptability, and the ability to foster team cohesion under high responsibility.
+          Assigned to the Military Working Dog Unit. Trained dogs in obedience, bite work, and guard protocols to enhance base and operational security. Managed their daily care and built unique bonds built on trust, responsibility, and consistency.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Photo Strip -->
-  <section class="py-20 px-6 md:px-20 bg-gradient-to-br from-white via-blue-50 to-white" data-aos="zoom-in" data-aos-delay="500">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-2xl font-semibold text-center mb-10">Moments Captured</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="https://via.placeholder.com/300x200" class="rounded-lg shadow" alt="Gallery" />
-        <img src="https://via.placeholder.com/300x200" class="rounded-lg shadow" alt="Gallery" />
-        <img src="https://via.placeholder.com/300x200" class="rounded-lg shadow" alt="Gallery" />
-        <img src="https://via.placeholder.com/300x200" class="rounded-lg shadow" alt="Gallery" />
+  <section class="px-6 md:px-20 py-16 bg-white/80" data-aos="fade-up" data-aos-delay="350">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
+      <img src="Military/assets/MWDU2.PNG" class="rounded-xl shadow-lg" alt="Instructor" />
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Corporal – Auxiliary Instructor</h2>
+        <p class="text-sm text-gray-500 mb-4">Jul 2023 – Nov 2023</p>
+        <p class="text-gray-700 leading-relaxed">
+          Stepped into a leadership role, guiding Dog Handler Trainees through hands-on exercises in obedience, detection, and safety. Strengthened communication and teamwork while upholding high instructional standards.
+        </p>
       </div>
+    </div>
+  </section>
+
+  <section class="px-6 md:px-20 py-16" data-aos="fade-up" data-aos-delay="400">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <img src="Military/assets/MSP.JPG" class="rounded-xl shadow-lg" alt="Head Instructor" />
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Corporal First Class – Head Instructor</h2>
+        <p class="text-sm text-gray-500 mb-4">Nov 2023 – Sep 2024</p>
+        <p class="text-gray-700 leading-relaxed">
+          Promoted to the SAF’s highest enlistee rank for outstanding contributions. Led the Dog Handler Course and a team of instructors, planning and executing training aligned to SAF standards. Represented the unit during international demonstrations for delegations including the U.S. and Australian Army. Awarded Best Soldier of the Month in July 2024.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote / Highlight -->
+  <section class="py-20 px-6 md:px-20 bg-gradient-to-r from-blue-50 to-white" data-aos="fade-up" data-aos-delay="500">
+    <div class="max-w-4xl mx-auto text-center">
+      <blockquote class="italic text-gray-700 text-lg leading-relaxed">
+        “Serving in the Military Working Dog Unit taught me more than discipline — it gave me a deep sense of trust, resilience, and the weight of leadership.”
+      </blockquote>
     </div>
   </section>
 
   <!-- Reflections -->
-  <section class="px-6 md:px-20 py-20 bg-white/90" data-aos="fade-up" data-aos-delay="600">
+  <section class="px-6 md:px-20 py-20 bg-white/90" data-aos="fade-up" data-aos-delay="550">
     <div class="max-w-4xl mx-auto text-center">
       <h3 class="text-2xl font-semibold mb-6">Reflections</h3>
       <p class="text-gray-700 text-lg leading-relaxed">
-        My time in uniform reshaped who I am. From late-night duties to the pride of watching trainees thrive, I found purpose in service. The military didn’t just test me — it refined me. I emerged not just as a stronger individual, but as someone deeply aware of leadership, responsibility, and the value of trust.
+        My military journey reshaped who I am. It taught me to lead with calm under pressure, to build trust in silence, and to find pride in responsibility. From trainee to instructor, from handler to leader — I grew not just in rank, but in character.
       </p>
     </div>
   </section>
 
+
+<section class="py-20 bg-white/90" data-aos="fade-up" data-aos-delay="600">
+  <h3 class="text-2xl font-semibold text-center mb-8">Snapshots in Service</h3>
+
+  <div id="filmStrip" class="overflow-hidden px-4 md:px-20">
+    <div id="filmContent" class="flex gap-4 w-max">
+      <!-- Original images (will be duplicated) -->
+      <img src="Military/assets/BMT3.JPG" class="gallery-img" />
+      <img src="Military/assets/BMT1.JPG" class="gallery-img" />
+      <img src="Military/assets/ST1.JPG" class="gallery-img" />
+      <img src="Military/assets/MWDU1.JPG" class="gallery-img" />
+      <img src="Military/assets/MSP2.JPEG" class="gallery-img" />
+      <img src="Military/assets/MSP3.JPG" class="gallery-img" />
+      <img src="Military/assets/Musketeers-Champions.JPG" class="gallery-img" />
+    </div>
+  </div>
+</section>
+
+
+
+
   <!-- Back Button -->
-  <div class="text-center my-10" data-aos="fade-up" data-aos-delay="700">
+  <div class="text-center my-10" data-aos="fade-up" data-aos-delay="600">
     <a href="index.html#timeline" class="text-blue-600 hover:underline transition">← Back to Timeline</a>
   </div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("filmStrip");
+    const content = document.getElementById("filmContent");
+
+    // Clone children into the same container for seamless loop
+    const clones = content.cloneNode(true);
+    Array.from(clones.children).forEach(child => {
+      content.appendChild(child.cloneNode(true));
+    });
+
+    let scrollAmount = 0;
+    const scrollSpeed = 0.5;
+
+    function animateScroll() {
+      scrollAmount += scrollSpeed;
+      container.scrollLeft = scrollAmount;
+
+      // Reset once half-way (because we doubled content)
+      if (scrollAmount >= content.scrollWidth / 2) {
+        scrollAmount = 0;
+        container.scrollLeft = 0;
+      }
+
+      requestAnimationFrame(animateScroll);
+    }
+
+    animateScroll();
+  });
+</script>
+
 
 </body>
 </html>
