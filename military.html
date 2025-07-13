@@ -140,21 +140,22 @@
 <section class="py-20 bg-white/90" data-aos="fade-up" data-aos-delay="600">
   <h3 class="text-2xl font-semibold text-center mb-8">Snapshots in Service</h3>
 
-  <div id="filmStrip" class="overflow-hidden px-4 md:px-20">
-    <div id="filmContent" class="flex gap-4 w-max">
-      <!-- Original images (will be duplicated) -->
-      <img src="Military/assets/BMT3.JPG" class="gallery-img" />
-      <img src="Military/assets/MWDU1.JPG" class="gallery-img" />
-      <img src="Military/assets/BMT1.JPG" class="gallery-img" />
-      <img src="Military/assets/MSP2.JPEG" class="gallery-img" />
-      <img src="Military/assets/MWDU3.png" class="gallery-img" />
-      <img src="Military/assets/MSP3.jpg" class="gallery-img" />
-      <img src="Military/assets/Musketeers-Champions.JPG" class="gallery-img" />
-      <img src="Military/assets/ST1.JPG" class="gallery-img" />
-
-
+  <div id="filmStrip" class="overflow-hidden relative px-4 md:px-20">
+    <div id="filmContentWrapper" class="will-change-transform whitespace-nowrap">
+      <div id="filmContent" class="inline-flex gap-4 w-max">
+        <!-- Your images -->
+        <img src="Military/assets/BMT3.JPG" class="gallery-img" />
+        <img src="Military/assets/MWDU1.JPG" class="gallery-img" />
+        <img src="Military/assets/BMT1.JPG" class="gallery-img" />
+        <img src="Military/assets/MSP2.JPEG" class="gallery-img" />
+        <img src="Military/assets/MWDU3.png" class="gallery-img" />
+        <img src="Military/assets/MSP3.jpg" class="gallery-img" />
+        <img src="Military/assets/Musketeers-Champions.JPG" class="gallery-img" />
+        <img src="Military/assets/ST1.JPG" class="gallery-img" />
+      </div>
     </div>
   </div>
+  
 </section>
 
 
@@ -170,34 +171,40 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("filmStrip");
+    const wrapper = document.getElementById("filmContentWrapper");
     const content = document.getElementById("filmContent");
 
-    // Clone children into the same container for seamless loop
-    const clones = content.cloneNode(true);
-    Array.from(clones.children).forEach(child => {
-      content.appendChild(child.cloneNode(true));
-    });
+    // Clone the content once
+    const clone = content.cloneNode(true);
+    wrapper.appendChild(clone);
 
-    let scrollAmount = 0;
-    const scrollSpeed = 0.5;
+    let pos = 0;
+    const speed = 50; // pixels per second
 
-    function animateScroll() {
-      scrollAmount += scrollSpeed;
-      container.scrollLeft = scrollAmount;
+    let lastTimestamp;
 
-      // Reset once half-way (because we doubled content)
-      if (scrollAmount >= content.scrollWidth / 2) {
-        scrollAmount = 0;
-        container.scrollLeft = 0;
+    function animateScroll(timestamp) {
+      if (!lastTimestamp) lastTimestamp = timestamp;
+      const delta = (timestamp - lastTimestamp) / 1000;
+      lastTimestamp = timestamp;
+
+      pos -= speed * delta;
+
+      const contentWidth = content.offsetWidth;
+      if (Math.abs(pos) >= contentWidth) {
+        pos = 0;
       }
+
+      wrapper.style.transform = `translateX(${pos}px)`;
 
       requestAnimationFrame(animateScroll);
     }
 
-    animateScroll();
+    requestAnimationFrame(animateScroll);
   });
 </script>
+
+
 
 <script>
     fetch('../navbar.html')

@@ -1,0 +1,3 @@
+Military picture slideshow - enable scrolling 
+More navigation or somehow bring the user back to where they left off
+Edit CV - screenshot has a highlighted section
