@@ -76,6 +76,21 @@
   background-color: rgba(255,255,255,0.9); /* fallback/overlay */
 }
 
+@keyframes letterFadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-180px);
+    opacity: 1;
+  }
+}
+
+.letter.animate-fade {
+  animation: letterFadeUp 0.8s ease forwards;
+}
+
 
 
 
@@ -117,7 +132,7 @@
 
   <main class="max-w-3xl mx-auto p-6 space-y-20">
 
-<section id="about" class="scroll-mt-28 max-w-6xl mx-auto py-16 px-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+<section id="about" class="scroll-mt-28 max-w-6xl mx-auto py-16 px-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
   <h2 class="text-3xl font-bold mb-10 text-center">👋 About Me</h2>
 
   <div class="flex flex-col md:flex-row items-center md:items-center gap-12">
@@ -536,9 +551,7 @@ backdrop.addEventListener("click", () => {
         envelope.className = "testimonial-envelope relative bg-gray-100 rounded-lg shadow-lg overflow-visible group transition-all duration-500 cursor-pointer";
         envelope.setAttribute("data-open", "false");
         envelope.setAttribute("data-index", index);
-        envelope.setAttribute("data-aos", "fade-up");
-        envelope.setAttribute("data-aos-delay", `${100 + index * 100}`);
-        envelope.setAttribute("data-aos-duration", "1000");
+
 
         envelope.innerHTML = `
           <div class="flap absolute top-0 left-0 w-full h-0 z-10 transition-transform duration-500 origin-top bg-white"
@@ -591,16 +604,20 @@ backdrop.addEventListener("click", () => {
     openEnvelope.setAttribute('data-open', 'false');
   }
 
-  if (isOpen) {
-    // If clicking the same envelope again, close it
+    if (isOpen) {
     flap.style.transform = 'rotateX(0deg)';
+    
+    // ⬅️ Properly hide the letter again
+    letter.classList.remove('animate-fade');
     letter.style.opacity = 0;
     letter.style.transform = 'translateY(0) scale(0.95)';
+    
     letterBackdrop.classList.remove('opacity-100');
     letterBackdrop.classList.add('opacity-0', 'pointer-events-none');
     envelope.setAttribute('data-open', 'false');
     openIndex = null;
-  } else {
+  }
+ else {
     // OPEN the letter
     flap.style.transform = 'rotateX(-120deg)';
 
