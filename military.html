@@ -31,15 +31,25 @@
 </head>
 <body class="text-gray-800 overflow-x-hidden">
 
+    <div id="navbar-placeholder"></div>
+
+
   <!-- AOS animation init -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init();</script>
 
   <!-- Hero Section -->
-  <header class="px-6 md:px-16 pt-20 pb-12 text-center" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">My Military Journey</h1>
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto">From recruit to Head Instructor, my service in the Singapore Armed Forces shaped who I am today — through challenge, leadership, and trust.</p>
-  </header>
+<header class="relative h-screen px-6 md:px-16 flex flex-col justify-center items-center text-center" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">My Military Journey</h1>
+  <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+    From recruit to Head Instructor, my service in the Singapore Armed Forces shaped who I am today — through challenge, leadership, and trust.
+  </p>
+  
+  <!-- Scroll Prompt -->
+  <div class="absolute bottom-10 text-gray-400 text-sm animate-bounce">
+    ↓ Scroll to begin
+  </div>
+</header>
 
   <!-- SECTION TEMPLATE -->
   <section class="px-6 md:px-20 py-16" data-aos="fade-up" data-aos-delay="200">
@@ -134,12 +144,15 @@
     <div id="filmContent" class="flex gap-4 w-max">
       <!-- Original images (will be duplicated) -->
       <img src="Military/assets/BMT3.JPG" class="gallery-img" />
-      <img src="Military/assets/BMT1.JPG" class="gallery-img" />
-      <img src="Military/assets/ST1.JPG" class="gallery-img" />
       <img src="Military/assets/MWDU1.JPG" class="gallery-img" />
+      <img src="Military/assets/BMT1.JPG" class="gallery-img" />
       <img src="Military/assets/MSP2.JPEG" class="gallery-img" />
+      <img src="Military/assets/MWDU3.png" class="gallery-img" />
       <img src="Military/assets/MSP3.JPG" class="gallery-img" />
       <img src="Military/assets/Musketeers-Champions.JPG" class="gallery-img" />
+      <img src="Military/assets/ST1.JPG" class="gallery-img" />
+
+
     </div>
   </div>
 </section>
@@ -183,6 +196,59 @@
     animateScroll();
   });
 </script>
+
+<script>
+    fetch('../navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+  
+        // --- Attach interactivity AFTER insert ---
+        const burger = document.getElementById("burger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const backdrop = document.getElementById("backdrop");
+  
+        const bar1 = document.getElementById("bar1");
+        const bar2 = document.getElementById("bar2");
+        const bar3 = document.getElementById("bar3");
+  
+        let isOpen = false;
+  
+        function toggleMenu(open) {
+          if (open) {
+            mobileMenu.classList.remove("max-h-0", "opacity-0", "pb-0");
+            mobileMenu.classList.add("max-h-96", "opacity-100", "pb-4");
+  
+            backdrop.classList.remove("hidden");
+            setTimeout(() => backdrop.classList.add("opacity-100"), 10);
+            document.body.classList.add("overflow-hidden");
+  
+            bar1.classList.add("rotate-45", "top-1/2", "-translate-y-1/2");
+            bar3.classList.add("-rotate-45", "bottom-auto", "top-1/2", "-translate-y-1/2");
+            bar2.classList.add("opacity-0");
+          } else {
+            mobileMenu.classList.add("max-h-0", "opacity-0", "pb-0");
+            mobileMenu.classList.remove("max-h-96", "opacity-100", "pb-4");
+  
+            backdrop.classList.remove("opacity-100");
+            setTimeout(() => backdrop.classList.add("hidden"), 500);
+            document.body.classList.remove("overflow-hidden");
+  
+            bar1.classList.remove("rotate-45", "top-1/2", "-translate-y-1/2");
+            bar3.classList.remove("-rotate-45", "bottom-auto", "top-1/2", "-translate-y-1/2");
+            bar2.classList.remove("opacity-0");
+          }
+  
+          isOpen = open;
+        }
+  
+        burger.addEventListener("click", () => toggleMenu(!isOpen));
+        backdrop.addEventListener("click", () => isOpen && toggleMenu(false));
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+          link.addEventListener("click", () => isOpen && toggleMenu(false));
+        });
+      });
+  </script>
 
 
 </body>

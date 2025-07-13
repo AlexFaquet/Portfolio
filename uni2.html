@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>University – Under Construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #0a0f18 url('https://www.transparenttextures.com/patterns/graph-paper.png') repeat;
+      color: #60a5fa;
+      font-family: 'Architects Daughter', cursive;
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px dashed #60a5fa;
+      padding-bottom: 0.5rem;
+    }
+
+    .note {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      max-width: 700px;
+      line-height: 1.6;
+      background-color: rgba(255, 255, 255, 0.02);
+      border: 1px dashed #60a5fa;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .line {
+      height: 2px;
+      background: #60a5fa;
+      width: 0;
+      margin: 2rem 0;
+      animation: draw 2s forwards ease-in-out;
+    }
+
+    @keyframes draw {
+      to {
+        width: 80%;
+      }
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #3b82f6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" data-aos="fade-up">
+    <h1>📐 University Page in Progress</h1>
+
+    <div class="line"></div>
+
+    <div class="note" data-aos="zoom-in-up" data-aos-delay="400">
+      This blueprint is still being drawn. The next chapter — St Andrews — is currently unfolding.
+      <br><br>
+      Coding, problem-solving, late-night coffee... all being sketched in real-time.
+    </div>
+
+    <footer data-aos="fade-in" data-aos-delay="800">
+      Updated July 2025 · Return soon to see the finished design
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

@@ -59,6 +59,7 @@
 
 
 
+
   </style>
   
 </head>
@@ -80,6 +81,11 @@
       
         <!-- Subtitle -->
         <p class="text-xl text-gray-700">My Journey</p>
+
+        <p class="text-md text-gray-500 italic mt-2 animate-fadeIn delay-300">
+“Worked hard. Chose differently. Still learning.”
+</p>
+
       
         <!-- Scroll down indicator -->
         <div class="mt-12 animate-bounce text-gray-500 text-sm">
@@ -91,23 +97,37 @@
 
   <main class="max-w-3xl mx-auto p-6 space-y-20">
 
-    <section id="about" class="scroll-mt-28 max-w-3xl mx-auto py-16 px-6" data-aos="fade-up" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000"   >
-        <h2 class="text-3xl font-bold mb-4 justify-center items-center text-center">👋 About Me</h2>
-        <p class="text-lg text-gray-700 leading-relaxed text-center">
-          Hi, I’m Alex — a 21-year-old second-year student at the University of St Andrews.  
-          I’m a curious thinker, a lifelong problem solver, and someone who thrives under pressure.  
-          My journey has taken me from leading my school as Head Boy, to serving in the military as a Head Instructor, and now to exploring the intersections of Mathematics and Computer Science in academia and beyond.
-        </p>
-      
-        <p class="text-lg text-gray-700 leading-relaxed mt-4 text-center">
-          Discipline and drive have defined much of my path. I’ve always been passionate about technology, but it’s my leadership experiences — whether representing the armed forces or an entire student-body — that taught me how to navigate real-world challenges and think strategically.
-        </p>
-      
-        <p class="text-lg text-gray-700 leading-relaxed mt-4 text-center">
-            Outside of work and academics, I’m an avid golfer — a passion that actually began when I first heard of St Andrews. I also enjoy staying active through basketball, where I play on the university’s second team.
-          </p>
-          
-      </section>
+<section id="about" class="scroll-mt-28 max-w-6xl mx-auto py-16 px-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+  <h2 class="text-3xl font-bold mb-10 text-center">👋 About Me</h2>
+
+  <div class="flex flex-col md:flex-row items-center md:items-center gap-12">
+    
+    <!-- Profile Photo -->
+    <div class="flex-shrink-0">
+      <img src="Uni/assets/Me1.JPG" alt="Alex Faquet" class="w-60 h-60 rounded-full object-cover border-2 border-cyan-400 shadow-lg hover:scale-105 transition duration-300" />
+    </div>
+
+    <!-- Text -->
+    <div class="flex-1 max-w-2xl">
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Hi, I’m Alex — a 21-year-old second-year student at the University of St Andrews.  
+        I’m a curious thinker, a lifelong problem solver, and someone who thrives under pressure.  
+        My journey has taken me from leading my school as Head Boy, to serving in the military as a Head Instructor, and now to exploring the intersections of Mathematics and Computer Science in academia and beyond.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mt-4">
+        Discipline and drive have defined much of my path. I’ve always been passionate about technology, but it’s my leadership experiences — whether representing the armed forces or an entire student-body — that taught me how to navigate real-world challenges and think strategically.
+      </p>
+
+      <p class="text-lg text-gray-700 leading-relaxed mt-4">
+        Outside of work and academics, I’m an avid golfer — a passion that actually began when I first heard of St Andrews. I also enjoy staying active through basketball, where I play on the university’s second team.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
       
 
     <!-- A-Levels + Head Boy -->
@@ -121,7 +141,7 @@
           <p class="text-gray-700">
             During sixth form, I was elected Head Boy — a role that allowed me to lead student initiatives, organize major events, and build my confidence as a speaker and leader.
           </p>
-          <a href="#details-alevels" class="mt-3 inline-block text-blue-600 hover:underline">Read more →</a>
+          <a href="alevels.html" class="mt-3 inline-block text-blue-600 hover:underline">Read more →</a>
         </div>
       </section>
       
@@ -137,7 +157,7 @@
           <p class="text-gray-700 text-right">
             I enlisted in the Singapore Armed Forces and rose through the ranks to become Corporal First Class and Head Instructor of the Dog Handler Course. I trained new recruits, led performances for foreign militaries, and developed a deep sense of discipline, leadership, and resilience.
           </p>
-          <a href="#details-army" class="mt-3 inline-block text-blue-600 hover:underline">Read more →</a>
+          <a href="military.html" class="mt-3 inline-block text-blue-600 hover:underline">Read more →</a>
         </div>
       </section>
       
@@ -153,7 +173,7 @@
           <p class="text-gray-700">
             I’m currently studying Mathematics and Computer Science at the University of St Andrews. University life has taught me to work more efficiently, stay focused under pressure, and think with clarity — both in code and beyond.
         </p>
-          <a href="#details-uni" class="mt-3 inline-block text-blue-600 hover:underline">Read more →</a>
+          <a href="uni.html" class="mt-3 inline-block text-blue-600 hover:underline">Read more →</a>
         </div>
 
       </section>
@@ -285,21 +305,6 @@
 
   </main>
 
-  <!-- Expanded Sections -->
-  <section id="details-alevels" class="p-6 bg-white mt-20 shadow" data-aos="fade-in">
-    <h3 class="text-xl font-bold mb-2">More on A-Levels & Head Boy</h3>
-    <p>I led school assemblies, organized events, mentored younger students, and acted as a liaison between students and staff. This laid the foundation for my confidence as a speaker and leader.</p>
-  </section>
-
-  <section id="details-army" class="p-6 bg-white mt-20 shadow" data-aos="fade-in">
-    <h3 class="text-xl font-bold mb-2">More on Army Service</h3>
-    <p>Promoted to Corporal First Class, I trained Auxiliary Instructors and recruits, managed high-stakes scenarios, and led performances for foreign militaries, including bomb search drills and parades.</p>
-  </section>
-
-  <section id="details-uni" class="p-6 bg-white mt-20 shadow" data-aos="fade-in">
-    <h3 class="text-xl font-bold mb-2">More on University Life</h3>
-    <p>My experience at the University of St Andrews has been both challenging and transformative. Studying Computer Science has taught me to approach problems with precision, work efficiently under pressure, and stay focused for extended periods — all while maintaining the resilience needed to keep improving. The mental discipline and strategic thinking I've developed here complement the leadership foundation I built during national service, and continue to shape how I approach both technical and real-world challenges.</p>
-  </section>
 
   <hr class="w-16 h-1 mx-auto bg-blue-600 rounded-full mb-6">
   
